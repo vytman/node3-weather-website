@@ -6,7 +6,7 @@ const messageTwo = document.getElementById('message-2');
 weatherForm.addEventListener('submit', e => {
 	e.preventDefault();
 
-	fetch('http://localhost:3000/weather?address=' + search.value).then(response => {
+	fetch('/weather?address=' + search.value).then(response => {
 		messageOne.textContent = 'Loading...';
 		messageTwo.textContent = '';
 		response.json().then(data => {
